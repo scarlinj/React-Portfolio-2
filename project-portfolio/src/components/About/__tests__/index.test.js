@@ -11,7 +11,7 @@ describe('About component', () => {
         it('renders', () => {
             render(<About />);
           });
-        // Second Test
+        // Second Test to compare snapshots of the DOM
         it('matches snapshot DOM node structure', () => {
             // render About
             const { asFragment } = render(<About />);
