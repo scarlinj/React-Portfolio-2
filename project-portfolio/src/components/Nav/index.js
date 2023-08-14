@@ -1,43 +1,53 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { capitalizeFirstLetter } from "../../utils/helpers";
 
-function Nav() {
-  const  categories = [
-    { name: 'About Me', description: 'About the developer' },
-    { name: 'Portfolio', description: 'A list of projects I developed' },
-    { name: 'Resume', description: 'My professional background' },
-    { name: 'Contact Me', description: 'Contact me' }
-  ];
-  // const handleClick = () => {
-  //   console.log("click handled")
-  // };
-  function categorySelected(name) {
-    console.log(`${name} clicked`)
-  }
+function Nav(props) {
+  const {
+    categories = [],
+    setCurrentCategory,
+    currentCategory,
+  } = props;
 
-    return (
-      <header>
-        <h1 id="nav"></h1>
-        <h2>
-          <a href="/">
-            <span role="img" aria-label="logo"> 👨‍💻 </span> Stephen Carlin Web Development
-          </a>
-        </h2>
+  useEffect(() => {
+    document.title = capitalizeFirstLetter(currentCategory.name);
+  }, [currentCategory]);
+
+  return (
+    <header className="flex-row px-1">
+      <h2>
+        <a data-testid="link" href="/">
+        <span role="img" aria-label="logo"> {" "} 👨‍💻 </span> {" "} Stephen Carlin Web Development
+        </a>
+      </h2>
   <nav>
     <ul className="flex-row">
+    <li className="mx-2">
+      <a data-testid="about" href="#about">
+        About me
+      </a>
+    </li>
+    <li className="mx-2">
+      <span>Contact</span>
+    </li>
       {categories.map((category) => (
-        <li className="mx-1" key={category.name}>
+        <li className={`mx-1 ${
+          currentCategory.name === category.name && 'navActive'
+        }`} key={category.name}>
           {/* onClick() attribute is expecting a callback function declaration.
            It's important that we wrap it in a function declaration rather than just calling categorySelected(category.name), 
            which would cause the function to get called whenever the component renders as well */}
-              <span onClick={() => categorySelected(category.name)} >
-      {category.name}
-    </span>
-        </li>
-        ))}
-    </ul>
-  </nav>
-      </header>
-    );
-  }
+              <span onClick={() => {
+                setCurrentCategory(category)
+              }}
+            >
+                {capitalizeFirstLetter(category.name)}
+              </span>
+            </li>
+          ))}
+      </ul>
+    </nav>
+  </header>
+);
+}
 
 export default Nav;
