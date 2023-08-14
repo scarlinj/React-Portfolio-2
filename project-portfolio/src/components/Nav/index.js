@@ -18,10 +18,10 @@ function Nav() {
       <header>
         <h1 id="nav"></h1>
         <h2>
-    <a href="/">
-      <span role="img" aria-label="camera"> 👨‍💻 </span> Stephen Carlin Web Development
-    </a>
-  </h2>
+          <a href="/">
+            <span role="img" aria-label="logo"> 👨‍💻 </span> Stephen Carlin Web Development
+          </a>
+        </h2>
   <nav>
     <ul className="flex-row">
       {categories.map((category) => (
