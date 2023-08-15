@@ -38,6 +38,9 @@ const ProjectList = ({ category }) => {
   //     };
 
   // Add filter to display project screens properly
+  // going through each project in the projects array, trying to find every project that matches the category that was selected by the user. 
+  // If a project matches the condition, it is returned in an array and assigned to currentProjects. Then we can map the currentProjects array to render 
+  // each project that matches the category selected by the user.
   const currentProjects = projects.filter((project) => project.category === category);
 
 

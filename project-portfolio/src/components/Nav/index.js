@@ -25,14 +25,15 @@ function Nav(props) {
       </h2>
   <nav>
     <ul className="flex-row">
-    <li className="mx-2">
+      {/* hard-coded headers - replace using mapping */}
+    {/* <li className="mx-2">
       <a data-testid="about" href="#about">
         About me
       </a>
     </li>
     <li className="mx-2">
       <span>Contact</span>
-    </li>
+    </li> */}
       {categories.map((category) => (
         <li className={`mx-1 ${
           currentCategory.name === category.name && 'navActive'
