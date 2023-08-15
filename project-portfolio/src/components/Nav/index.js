@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { capitalizeFirstLetter } from "../../utils/helpers";
 
+// New props also cause components to re-render. So even though the setter in App.js doesn’t cause its children to re-render, the fact that its prop changed does.
+
 function Nav(props) {
   const {
     categories = [],
@@ -8,6 +10,8 @@ function Nav(props) {
     currentCategory,
   } = props;
 
+  // to update document.title, reassign document.title to equal current category
+  // use "useEffect" hook, which is an API reflecting lifecycle methods (components mount, unmount, or update)
   useEffect(() => {
     document.title = capitalizeFirstLetter(currentCategory.name);
   }, [currentCategory]);
