@@ -10,8 +10,9 @@ function Nav(props) {
     currentCategory,
   } = props;
 
-  // to update document.title, reassign document.title to equal current category
-  // use "useEffect" hook, which is an API reflecting lifecycle methods (components mount, unmount, or update)
+  // To update document.title, reassign document.title to equal current category
+  // Use "useEffect" hook, which is an API reflecting lifecycle methods (components mount, unmount, or update)
+  // The second argument directs the hook to re-render the component on changes to the value of this state.
   useEffect(() => {
     document.title = capitalizeFirstLetter(currentCategory.name);
   }, [currentCategory]);
