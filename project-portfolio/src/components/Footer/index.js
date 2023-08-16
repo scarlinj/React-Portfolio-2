@@ -6,8 +6,8 @@ function Footer() {
   return (
     <footer className="flex-row px-1">
       <h2>
-        <a data-testid="link" href="/">
-          <span> Created May 2022 </span>
+        <a>
+          <body> Created May 2022 </body>
         </a>
         {/* <a href="https://github.com/scarlinj">Github
         </a>
