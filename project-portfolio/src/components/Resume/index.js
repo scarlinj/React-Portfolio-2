@@ -6,7 +6,7 @@ function Resume() {
 
   return (
     <section className="my-5" >
-      <h1 id="about">See my Resume and LinkedIn Profile below</h1>
+      <p id="about">See my Resume and LinkedIn Profile below</p>
       {/* add a cover image here if needed */}
       {/* <img src={coverImage} className="my-2" style={{ width: "100%" }} alt="cover" /> */}
       <div className="my-2">

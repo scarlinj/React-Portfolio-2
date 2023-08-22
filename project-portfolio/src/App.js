@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Nav from './components/Nav';
 import About from './components/About';
-import Contact from './components/Contact';
+import ContactForm from './components/Contact';
 import Portfolio from "./components/Portfolio";
 import Gallery from "./components/Gallery";
 import Resume from "./components/Resume";
@@ -39,7 +39,7 @@ function renderCategory() {
       return <About/>
 
       case "contact":
-        return <Contact/>
+        return <ContactForm/>
 
       case "portfolio":
       return <Portfolio/>
