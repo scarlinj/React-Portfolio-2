@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Gallery from '../Gallery';
 import { capitalizeFirstLetter } from '../../utils/helpers';
-// import project from "../../assets/small/projects";
+import project from "../../assets/small/projects/1.JPG";
 
 const Portfolio = ({ category }) => {
   // useState is a function that always returns an array.  First item is a value of your state.  Second item is a setter, to allow you to set the state to something else.
@@ -74,7 +74,7 @@ const Portfolio = ({ category }) => {
           // src was assigned the require expression. Though this isn't a common practice, it certainly has its use cases! 
           // We were also able to take advantage of the incremental naming of the images by using i
           // To render the image, the default property must be invoked.
-            src={require(`../../assets/small/${category}/${i}.jpg`).default}
+            src={require(`../../assets/small/${category}/${i}.JPG`).default}
             // alt attribute used for accessibility user-assistance devices, such as screen readers, so the image's name was assigned
             alt={image.name}
             className="img-thumbnail mx-1"

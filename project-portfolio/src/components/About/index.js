@@ -9,11 +9,11 @@ function About() {
       <section className="my-5">
         <h1 id="about">Who am I?</h1>
         {/* <img src={coverImage} className="my-2" style={{ width: "100%" }} alt="cover" /> */}
+        <img src={profileImage} className="my-2" alt="stephenProfileImage">
+        </img>
         <p>
           Stephen is a professional in financial tehnology in San Francisco, California
         </p>
-        <img src={profileImage} className="my-2" alt="stephenProfileImage">
-        </img>
       </section>
     );
   }

@@ -18,10 +18,12 @@ function App() {
     { name: 'about', description: 'Gives a background of Stephen and his experience in web development' },
     { name: 'contact', description: 'How to contact me' },
     { name: 'portfolio', description: 'Examples of websites developed' },
+    { name: 'gallery', description: 'Screenshots of websites developed'},
     { name: 'resume', description: 'Professional resume' },
   ]);
 
-  const [currentCategory, setCurrentCategory] = useState(categories[1]);
+  // within useState below, default to the first category, which is 0 (about).  If you set this to 1, it will move to the second position and load the Contact page first
+  const [currentCategory, setCurrentCategory] = useState(categories[0]);
   
 function findCategory(str) {
   // receive string value and loop through categories
@@ -43,6 +45,9 @@ function renderCategory() {
 
       case "portfolio":
       return <Portfolio/>
+
+      case "gallery":
+        return <Gallery/>
 
       case "resume":
         return <Resume/>

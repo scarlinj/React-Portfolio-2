@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { capitalizeFirstLetter } from "../../utils/helpers";
 
+// changing the value of a variable within a component does not cause the component to re-render in static code
+// To prompt page to re-render after variable is updated, use React Hooks 
 // New props also cause components to re-render. So even though the setter in App.js doesn’t cause its children to re-render, the fact that its prop changed does.
 
 function Nav(props) {
@@ -10,8 +12,19 @@ function Nav(props) {
     currentCategory,
   } = props;
 
+  // const [categories] = useState([
+  //   {
+  //     name: 'About',
+  //     description: 'About Stephen',
+  //   },
+  //   { name: 'Contact', description: 'Contact me here' },
+  //   { name: 'Gallery', description: 'Images of my web pages' },
+  //   { name: 'Portfolio', description: 'Portoflio of my web pages' },
+  //   { name: 'Resume', description: 'My resume' }
+  // ]);
+  // const [currentCategory, setCurrentCategory] = useState(categories[0]);
   // To update document.title, reassign document.title to equal current category
-  // Use "useEffect" hook, which is an API reflecting lifecycle methods (components mount, unmount, or update)
+  // Use "useEffect" hook, which is an API reflecting lifecycle methods (components mount, unmount, or update), causes the component to re-render when the value updates.
   // The second argument directs the hook to re-render the component on changes to the value of this state.
   useEffect(() => {
     document.title = capitalizeFirstLetter(currentCategory.name);
@@ -26,7 +39,7 @@ function Nav(props) {
       </h2>
   <nav>
     <ul className="flex-row">
-      {/* hard-coded headers - replace using mapping */}
+      {/* hard-coded headers - replace using mapping (categories.map) */}
     {/* <li className="mx-2">
       <a data-testid="about" href="#about">
         About me
