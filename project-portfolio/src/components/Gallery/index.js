@@ -1,5 +1,5 @@
 import React from 'react';
-import Portfolio from '../Portfolio';
+import PhotoList from '../PhotoList';
 import { capitalizeFirstLetter } from '../../utils/helpers';
 import photo from "../../assets/small/projects/1.JPG"
 
@@ -15,6 +15,7 @@ function Gallery(props) {
     <h1 data-testid="h1tag">{capitalizeFirstLetter(currentCategory.name)}</h1>
       <p>{currentCategory.name}</p>
       {/* <p>{currentCategory.description}</p> */}
+      <PhotoList />
       <div>
         <img 
           src={photo}

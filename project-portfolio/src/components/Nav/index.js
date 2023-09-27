@@ -23,7 +23,8 @@ function Nav(props) {
   //   { name: 'Resume', description: 'My resume' }
   // ]);
   // const [currentCategory, setCurrentCategory] = useState(categories[0]);
-  // To update document.title, reassign document.title to equal current category
+  // 
+  // To update document.title, reassign document.title to equal current category (this will update the tab name)
   // Use "useEffect" hook, which is an API reflecting lifecycle methods (components mount, unmount, or update), causes the component to re-render when the value updates.
   // The second argument directs the hook to re-render the component on changes to the value of this state.
   useEffect(() => {
@@ -50,6 +51,7 @@ function Nav(props) {
     </li> */}
       {categories.map((category) => (
         <li className={`mx-1 ${
+          // navActive highlights the selected navigation title (if the currentCategory matches the catgory.name)
           currentCategory.name === category.name && 'navActive'
         }`} key={category.name}>
           {/* onClick() attribute is expecting a callback function declaration.
