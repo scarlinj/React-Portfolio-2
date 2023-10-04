@@ -43,7 +43,7 @@ function ContactForm() {
     setErrorMessage("");
   }
   
-  console.log(formState);
+  // console.log(formState);
 
     return (
       <section className="my-5">
@@ -75,7 +75,7 @@ function ContactForm() {
         </div>
 
          {/* <img src={coverImage} className="my-2" style={{ width: "50%" }} alt="cover image" /> */}
-         
+
       </section>
     );
   }

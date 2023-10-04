@@ -55,7 +55,7 @@ function renderCategory() {
       // if it doesn't find a match, return About page
     default:
       return <About/>
-      // break;
+      break;
   }
  }
 
@@ -69,10 +69,7 @@ function renderCategory() {
         findCategory={findCategory}
       ></Nav>
       <main>
-        {/* <Gallery></Gallery>
-        <Portfolio></Portfolio> 
-        <About></About> 
-        <Contact></Contact>   */}
+        {/* renderCategory below renders the page that matches category name */}
         {renderCategory()}
       </main>
       <footer>

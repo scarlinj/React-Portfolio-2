@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import Gallery from '../Gallery';
+// import Gallery from '../Gallery';
 import { capitalizeFirstLetter } from '../../utils/helpers';
-import project from "../../assets/small/projects/1.JPG";
+import image1 from "../../assets/small/projects/1.JPG";
 
 const Portfolio = ({ category }) => {
   // useState is a function that always returns an array.  First item is a value of your state.  Second item is a setter, to allow you to set the state to something else.
+  const [currentProject, setCurrentProject] = useState();
+  
   // Cannot use Hooks in a for loop
   const [projects] = useState([
     {
@@ -62,19 +64,26 @@ const Portfolio = ({ category }) => {
   // going through each project in the projects array, trying to find every project that matches the category that was selected by the user. 
   // If a project matches the condition, it is returned in an array and assigned to currentProjects. Then we can map the currentProjects array to render 
   // each project that matches the category selected by the user.
-  const currentProjects = projects.filter(project => project.category === category);
+  const currentProjects = projects.filter(project => project.category === "commercial");
 
   return (
     <div>
     {/* <h1>{capitalizeFirstLetter(currentCategory.name)}</h1>
       <p>{currentCategory.name}</p> */}
       <div className="flex-row">
+        {/* you will have to name the jpgs "1", "2", etc. */}
         {currentProjects.map((image, i) => (
           <img
           // src was assigned the require expression. Though this isn't a common practice, it certainly has its use cases! 
           // We were also able to take advantage of the incremental naming of the images by using i
           // To render the image, the default property must be invoked.
-            src={require(`../../assets/small/${category}/${i}.JPG`).default}
+          // indexes start at 0 - if projectPreview images start at 1, use {i+1}
+            // src={require(`../../assets/small/${category}/${i}.JPG`).default}
+            // src={`img${i+1}`}
+            // test with a static image imported at top: ---> this works
+            // src={image1}
+            // pull the range of images from projects
+            src={`${i+1}`}
             // alt attribute used for accessibility user-assistance devices, such as screen readers, so the image's name was assigned
             alt={image.name}
             className="img-thumbnail mx-1"

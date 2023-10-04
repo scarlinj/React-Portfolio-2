@@ -1,19 +1,16 @@
 import React, { useState } from 'react';
 import PhotoList from '../PhotoList';
+import Portfolio from '../Portfolio';
 import { capitalizeFirstLetter } from '../../utils/helpers';
 import photo from "../../assets/small/projects/1.JPG"
 
 function Gallery(props) {
-    const { currentCategory } = props;
-    // return {
-    //     name: "projects",
-    //     description:
-    //       "Portfolio of projects for web development",
-    //   };
+  const { currentCategory } = props;
   return (
     <section>
-    <h1 data-testid="h1tag">{capitalizeFirstLetter(currentCategory.name)}</h1>
-      <p>{currentCategory.name}</p>
+    {/* <h1 data-testid="h1tag">{capitalizeFirstLetter(currentCategory.name)}</h1> */}
+    {/* currentCategory.name is not a valid path.  Find better way to sort. */}
+      {/* <p>{currentCategory.name}</p> */}
       {/* <p>{currentCategory.description}</p> */}
       <PhotoList />
       <div>

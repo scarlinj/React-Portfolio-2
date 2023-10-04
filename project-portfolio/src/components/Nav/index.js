@@ -8,10 +8,19 @@ import { capitalizeFirstLetter } from "../../utils/helpers";
 function Nav(props) {
   const {
     categories = [],
-    setCurrentCategory,
+    // setCurrentCategory,
     currentCategory,
+    findCategory
   } = props;
 
+  const handleClick = (item) => {
+    console.log(item);
+    // use props to get nav category, make it into lowercase
+    // will not find it if the first letter capitalized
+    // may not need findCategory - keep this to keep code cleaner
+    findCategory(item.toLowerCase());
+    // no need to "return" item;
+  };
   // const [categories] = useState([
   //   {
   //     name: 'About',
@@ -58,7 +67,7 @@ function Nav(props) {
            It's important that we wrap it in a function declaration rather than just calling categorySelected(category.name), 
            which would cause the function to get called whenever the component renders as well */}
               <span onClick={() => {
-                setCurrentCategory(category)
+                handleClick(category.name);
               }}
             >
                 {capitalizeFirstLetter(category.name)}

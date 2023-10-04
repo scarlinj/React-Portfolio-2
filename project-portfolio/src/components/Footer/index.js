@@ -7,7 +7,7 @@ function Footer() {
     <footer className="flex-row px-1">
       <h2>
         <a>
-          <body> Created May 2022 </body>
+          Created May 2022
         </a>
         <a href="https://github.com/scarlinj">Github
         </a>
