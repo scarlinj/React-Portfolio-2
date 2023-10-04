@@ -55,7 +55,7 @@ function renderCategory() {
       // if it doesn't find a match, return About page
     default:
       return <About/>
-      break;
+      // break;
   }
  }
 

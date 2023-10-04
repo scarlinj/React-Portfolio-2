@@ -15,7 +15,7 @@ function ContactForm() {
   // Use the setFormState function to update the formState value for the name property. Assign the value taken from the input field in the UI with e.target.value and assign 
   // this value to the property formState.name. Use the spread operator, "...formState," so we can retain the other key-value pairs in this object. Without the spread operator, 
   // the formState object would be overwritten to only contain the name: value key pair.
-  const handleInput = (e) => {
+  const handleChange = (e) => {
     // setFormState({...formState, name: e.target.value })
     const { target } = e;
     const inputType = target.name;
@@ -49,44 +49,22 @@ function ContactForm() {
       <section className="my-5">
               <h1>Contact me</h1>
       <form id="contact-form">
-
         <div>
           <label htmlFor="name">Name:</label>
-          <input
-          value={name}
-          name="name"
-          onChange={handleInput}
-          type="text"
-          defaultValue="name"
-          />
+          <input type="text" defaultValue={name} onChange={handleChange} name="name" />
         </div>
-
         <div>
           <label htmlFor="email">Email address:</label>
-          <input 
-          value={email}
-          name="email"
-          onChange={handleInput}
-          type="email"
-          defaultValue="email"
-          />
+          <input type="email" defaultValue={email} name="email" />
         </div>
-
         <div>
-          {/* "for" is reserved for Javascript, so we must use "htmlFor" below */}
+          {/* "for is reserved for Javascript, so we must use "htmlFor" below */}
           <label htmlFor="message">Message:</label>
-          <input 
-          value={message}
-          name="message"  
-          onChange={handleInput} 
-          type="message"
-          placeholder="message"
-          rows="5"  />
+          <textarea name="message" defaultValue={message} rows="5"  />
         </div> 
-
         <button type="button" onClick={handleFormSubmit}>Submit</button> 
       </form>
-        <h1 id="about">Contact Info</h1>
+
         <div className='my-2'>
         {/* <p>
           E-mail me at: scarlinj@gmail.com
@@ -95,40 +73,9 @@ function ContactForm() {
           You can also contact me through my Github Profile: https://github.com/scarlinj
         </p>
         </div>
-        <div>
-        <form className="form">
-          <input
-            value={email}
-            name="email"
-            onChange={handleInput}
-            type="email"
-            placeholder="email"
-          />
-          <input
-            value={name}
-            name="name"
-            onChange={handleInput}
-            type="text"
-            placeholder="name"
-          />
-          <input
-            value={message}
-            name="message"
-            onChange={handleInput}
-            type="message"
-            placeholder="message"
-          />
-          <button type="button" onClick={handleFormSubmit}>
-            Submit
-          </button>
-        </form>
-        {errorMessage && (
-          <div>
-            <p className="error-text">{errorMessage}</p>
-          </div>
-        )}
-      </div>
-        {/* <img src={coverImage} className="my-2" style={{ width: "50%" }} alt="cover image" /> */}
+
+         {/* <img src={coverImage} className="my-2" style={{ width: "50%" }} alt="cover image" /> */}
+         
       </section>
     );
   }
