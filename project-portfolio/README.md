@@ -2,6 +2,11 @@
 
 This is a website launched entirely through React. Click the links at the top to see pages about me, my portfolio and how to contact me. This was all built in React!
 
+
+## Table of Contents
+
+
+
 ## Features
 
 This is a single-page application portfolio for a web developer. When you load the portfolio, then I am presented with a page containing a header, a section for content, and a footer. When viewing the header, you will see the developer's name and navigation with titles corresponding to different sections of the portfolio. View the navigation to see the titles About Me, Portfolio, Contact, and Resume, with the title corresponding to the current section highlighted. When you click on a navigation title, the site presents the corresponding section below the navigation without the page reloading and that title is highlighted.

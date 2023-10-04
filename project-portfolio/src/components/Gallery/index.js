@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PhotoList from '../PhotoList';
 import { capitalizeFirstLetter } from '../../utils/helpers';
 import photo from "../../assets/small/projects/1.JPG"

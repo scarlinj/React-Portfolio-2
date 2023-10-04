@@ -11,9 +11,14 @@ function About() {
         {/* <img src={coverImage} className="my-2" style={{ width: "100%" }} alt="cover" /> */}
         <img src={profileImage} className="my-2" alt="stephenProfileImage">
         </img>
-        <p>
-          Stephen is a professional in financial tehnology in San Francisco, California
-        </p>
+        <li>
+          I am a professional in financial tehnology in San Francisco, California.
+        </li>
+        <li>I have worked in finance for over 10 years, particularly in the fintech space for the last five years.</li>
+        <li>
+          I also have a passion for programming and web development, so I hope to build a long career in this space.
+          Check out my portfolio in this site.
+        </li>
       </section>
     );
   }

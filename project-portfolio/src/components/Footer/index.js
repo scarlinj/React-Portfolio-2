@@ -9,12 +9,12 @@ function Footer() {
         <a>
           <body> Created May 2022 </body>
         </a>
-        {/* <a href="https://github.com/scarlinj">Github
+        <a href="https://github.com/scarlinj">Github
         </a>
         
         <a href="https://www.linkedin.com/in/stephen-carlin-14838b21/">
           LinkedIn
-        </a> */}
+        </a>
        
       </h2>
     </footer>

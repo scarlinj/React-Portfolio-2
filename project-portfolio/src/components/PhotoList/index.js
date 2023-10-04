@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Gallery from '../Gallery';
+// import Gallery from '../Gallery';
 
 const PhotoList = ({ category }) => {
   const [photos] = useState([
