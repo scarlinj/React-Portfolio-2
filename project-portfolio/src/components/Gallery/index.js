@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PhotoList from '../PhotoList';
 import Portfolio from '../Portfolio';
 import { capitalizeFirstLetter } from '../../utils/helpers';
-import photo from "../../assets/small/projects/1.JPG"
+import photo from "../../assets/small/projects/1.jpg"
 
 function Gallery(props) {
   const { currentCategory } = props;
@@ -12,7 +12,7 @@ function Gallery(props) {
     {/* currentCategory.name is not a valid path.  Find better way to sort. */}
       {/* <p>{currentCategory.name}</p> */}
       {/* <p>{currentCategory.description}</p> */}
-      <PhotoList />
+      <PhotoList category={currentCategory.name} />
       <div>
         <img 
           src={photo}
