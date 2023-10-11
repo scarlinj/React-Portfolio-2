@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 // import Gallery from '../Gallery';
 import { capitalizeFirstLetter } from '../../utils/helpers';
-import image1 from "../../assets/small/projects/1.jpg";
+// import image1 from "../../assets/small/projects/1.jpg";
 
 const Portfolio = ({ category }) => {
   // useState is a function that always returns an array.  First item is a value of your state.  Second item is a setter, to allow you to set the state to something else.
@@ -10,25 +10,46 @@ const Portfolio = ({ category }) => {
   // Cannot use Hooks in a for loop
   const [projects] = useState([
     {
+      name: 'More Tech News',
+      category: 'commercial',
+      description:
+        'A blog site for tech news created with Node.js. Users can sign up, then post, upvote, and comment on links to news articles. Currently troubleshooting user signup.',
+        url: 'https://more-tech-frozen-tundra-12598.herokuapp.com/'
+    },
+    {
+      name: 'Note taker',
+      category: 'commercial',
+      description:
+        'A simple note-taking app that runs entirely in the browser using Express and Node.js. A user session saves after submitting a note and they can even exit the browser without losing their posts.',
+        url: 'https://sheltered-coast-28214.herokuapp.com/'
+    },
+    {
+      name: 'Work Day Scheduler',
+      category: 'commercial',
+      description:
+        'This is a simple calendar application that allows the user to save events for each hour of the day. This app runs in the browser and features dynamically-updated HTML and CSS, using the Momentjs library and powered by jQuery.',
+        url: 'https://scarlinj.github.io/Work_Day_Scheduler/'
+    },
+    {
       name: 'Password Generator',
       category: 'commercial',
       description:
         'Generate secure password based on user criteria',
-        url: 'https://github.com/scarlinj/Challenge-3-Password-Generator.git'
+        url: 'https://scarlinj.github.io/Password-Generator/'
     },
     {
       name: 'ReadME Generator',
       category: 'commercial',
       description:
         'Generate a readME.md file with header links',
-        url: 'https://github.com/scarlinj/Challenge_9_Professional_README_Generator.git'
+        url: 'https://github.com/scarlinj/Professional_README_Generator'
     },
     {
-      name: 'Portfolio Generator',
+      name: 'Team Profile Generator',
       category: 'commercial',
       description:
         'Generate a profile for a user',
-        url: 'https://github.com/scarlinj/portfolio-generator.git'
+        url: 'https://github.com/scarlinj/Team_Profile_Generator'
     },
     {
       name: 'Country Holiday Search',
@@ -50,7 +71,7 @@ const Portfolio = ({ category }) => {
       description:
         'Post, find, and comment on recipes from other users',
         url: 'https://github.com/scarlinj/weather-dashboard.git'
-    },
+    }
   ]);
 
     // (currentCategory) {
