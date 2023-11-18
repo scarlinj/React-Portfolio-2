@@ -6,9 +6,23 @@ import photo from "../../assets/small/projects/1.jpg"
 
 function Gallery(props) {
   const currentCategory  = {
-    name: "projects",
-    description: "Photos of projects",
-    };
+    name: "Budget Tracker",
+    description: "Track your income and expenses in this visual application.",
+    }
+    // ,
+    // name: "More Tech News",
+    // description: "A blog website where users post technology articles, comment, and vote on posts.",
+    // }
+    // name: "Note Taker",
+    // description: "A note-taking app that saves your notes in the cloud.",
+    // },
+    // name: "Work Day Scheduler",
+    // description: "A calendar application that saves in the cloud.",
+    // },
+    // name: "ReadMe Generator",
+    // description: "A command-line application that answers questions to generate a Readme file.",
+    // }
+    ;
   return (
     <section>
     <h1 data-testid="h1tag">{capitalizeFirstLetter(currentCategory.name)}</h1>

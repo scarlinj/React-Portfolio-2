@@ -31,6 +31,13 @@ const Portfolio = ({ category }) => {
         url: 'https://scarlinj.github.io/Work_Day_Scheduler/'
     },
     {
+      name: 'Budget Tracker',
+      category: 'commercial',
+      description:
+        'Use this simple app to track your income and expenses in the cloud. Add funds and subtract them as needed. You can even use this app offline!',
+        url: 'https://intense-eyrie-26187.herokuapp.com/'
+    },
+    {
       name: 'Password Generator',
       category: 'commercial',
       description:
