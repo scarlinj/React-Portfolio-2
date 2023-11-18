@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 // import Gallery from '../Gallery';
 import Modal from '../Modal';
+import photo from "../../assets/small/projects/1.jpg"
 
 const PhotoList = ({ category }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);

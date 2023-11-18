@@ -6,7 +6,7 @@ import photo from "../../assets/small/projects/1.jpg"
 
 function Gallery(props) {
   const currentCategory  = {
-    name: "commercial",
+    name: "projects",
     description: "Photos of projects",
     };
   return (
@@ -14,8 +14,8 @@ function Gallery(props) {
     <h1 data-testid="h1tag">{capitalizeFirstLetter(currentCategory.name)}</h1>
     {/* currentCategory.name is not a valid path.  Find better way to sort. */}
       <p>{currentCategory.name}</p>
-      {/* <p>{currentCategory.description}</p> */}
-      {/* <PhotoList category={currentCategory.name} /> */}
+      <p>{currentCategory.description}</p>
+      <PhotoList category={currentCategory.name} />
       <div className='flex-row'>
         <img 
           src={photo}
