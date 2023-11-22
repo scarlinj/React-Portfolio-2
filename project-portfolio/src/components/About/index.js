@@ -12,7 +12,7 @@ function About() {
         <img src={profileImage} className="my-2" alt="stephenProfileImage">
         </img>
         <li>
-          I am a financial tehnology professional in San Francisco, California.
+          I am a financial technology professional in San Francisco, California.
         </li>
         <li>I have worked in finance for over 10 years, particularly in fintech for the last five years.</li>
         <li>
