@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 // import Gallery from '../Gallery';
 import { capitalizeFirstLetter } from '../../utils/helpers';
-// import image1 from "../../assets/small/projects/1.jpg";
+import photo from "../../assets/small/projects/1.jpg";
 
 const Portfolio = ({ category }) => {
   // useState is a function that always returns an array.  First item is a value of your state.  Second item is a setter, to allow you to set the state to something else.

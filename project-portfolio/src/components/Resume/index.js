@@ -13,7 +13,7 @@ function Resume() {
 
           <a href="https://github.com/scarlinj">Github
         </a>
-
+        <br></br>
         <a href="https://www.linkedin.com/in/stephen-carlin-14838b21/">
         LinkedIn
         </a>
